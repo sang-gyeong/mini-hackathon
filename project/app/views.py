@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Post_youtuber, Post_editor, Comment_editor, Comment_youtuber
+from .models import Post_youtuber, Post_editor, Comment_editor, Comment_youtuber, Apply
 from django.contrib.auth.models import User 
 from django.contrib import auth
 from datetime import datetime
@@ -43,7 +43,67 @@ def detail_youtuber(request, post_pk):
            content = request.POST['content'],
            author = request.user,
            rate = request.POST['rate'],
-           datetime = datetime.now()
+           datetime = datetime.now(),
         )
         return redirect('detail_youtuber', post_pk)
     return render(request, 'detail_youtuber.html', {'post' : post})
+<<<<<<< HEAD
+
+
+
+def form_to_editor(request):
+    if (request.method == 'POST'):
+        Apply.objects.create(
+            title = request.POST['title'],
+            content = request.POST['content'],
+            author = request.user,
+            datetime = datetime.now(),
+            img = request.POST['img']
+        )
+        return redirect(request, 'detail_editor')
+
+
+def new_editor(request):
+    if (request.method == 'POST'):
+        new_post = Post_editor.objects.create(
+            title = request.POST['title'],
+            content = request.POST['content'],
+            author = request.user,
+            datetime = datetime.now(),   
+            tool = request.POST['tool'],
+            work =request.POST['work'],
+            career = request.POST['career'],
+            period = request.POST['period'],
+            genre = request.POST['genre'],
+            rating = request.POST['rating'],
+            img = request.POST['img'],
+        )
+        return redirect('detail_editor', new_post.pk)
+
+    return render(request, 'new_editor.html')
+
+
+def new_youtuber(request):
+    if (request.method == 'POST'):
+        new_post = Post_youtuber.objects.create(
+            title = request.POST['title'],
+            content = request.POST['content'],
+            author = request.user,
+            datetime = datetime.now(),   
+            tool = request.POST['tool'],
+            work =request.POST['work'],
+            career = request.POST['career'],
+            period = request.POST['period'],
+            genre = request.POST['genre'],
+            rating = request.POST['rating'],
+            img = request.POST['img'],
+        )
+        return redirect('detail_youtuber', new_post.pk)
+
+    return render(request, 'new_youtuber.html')
+
+
+def edit_editor(request):
+    if (request.method )
+=======
+>>>>>>> 88a58ba2f41048a560c55c699732bc22e8330a8e
