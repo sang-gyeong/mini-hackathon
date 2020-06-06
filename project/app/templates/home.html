@@ -10,9 +10,58 @@
 </head>
 <body>
     {% block content %}
-    <div>
+    <div class="top">
         <div>오늘도,</div>
-        <div></div>
+        <div>00명의 유튜버와 00명의 편집자가</div>
+        <div>편-안에서 만나고 있습니다.</div>
+    </div>
+    <div class="best">
+        <div class="title">이번주의 BEST 편집자</div>
+        <div class="content">
+            <div class="video"></div>
+            <div class="videocontent"></div>
+        </div>
+    </div>
+    <div class="inquiry">
+        <div class="title">
+            <div>1분만에 설문조사하고,</div>
+            <div>나에게 딱 맞는 편집자 찾기</div>
+        </div>
+        <div class="editor">*저는 편집자에요!</div>
+        <div class="content">
+            <div class="q1">
+                <div class="q1_text">1. 원하시는 영상 종류가 있으신가요?</div>
+                <div class="q1_option">
+                    <input type="radio" name="chk_info" value="브이로그">브이로그
+                    <input type="radio" name="chk_info" value="뷰티">뷰티
+                    <input type="radio" name="chk_info" value="게임">게임
+                    <input type="radio" name="chk_info" value="스트리밍">스트리밍
+                    <input type="radio" name="chk_info" value="음악">음악
+                    <input type="radio" name="chk_info" value="요리">요리
+                    <input type="radio" name="chk_info" value="기타">기타
+                </div>
+            </div>
+            <div class="q2">
+                <div class="q2_text">2. 편집자의 장기 고용을 원하시나요?</div>
+                <div class="q2_option">
+                    <input type="radio" name="chk_info" value="예">예
+                    <input type="radio" name="chk_info" value="아니오">아니오
+                </div>
+            </div>
+            <div class="q3">
+                <div class="q3_text">3. 원하시는 근무형태가 있으신가요?</div>
+                <div class="q3_option">
+                    <input type="radio" name="chk_info" value="영상촬영">영상촬영
+                    <input type="radio" name="chk_info" value="영상편집">영상편집
+                    <input type="radio" name="chk_info" value="자막">자막
+                    <input type="radio" name="chk_info" value="썸네일">썸네일
+                    <input type="radio" name="chk_info" value="기타">기타
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <button>00명의 편집자 보러가기></button>
+        </div>
     </div>
     {% endblock content %}
 </body>
