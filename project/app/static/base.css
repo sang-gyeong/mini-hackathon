@@ -48,6 +48,7 @@ body{
     padding:30px;
     padding-top: 10px;
     border-top: lightgray solid 1px;
+    box-sizing: border-box;
 }
 
 .footer_introduce1{

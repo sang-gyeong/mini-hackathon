@@ -22,8 +22,8 @@ class Post_youtuber(models.Model):
 
 class Post_editor(models.Model):
     title = models.CharField(max_length=200)
-    content = models.TextField()
-    datetime = models.DateTimeField()
+    content = models.TextField(null=True)
+    datetime = models.DateTimeField(null=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='editor')
     img = models.TextField()
     tool = models.TextField(null=True)
