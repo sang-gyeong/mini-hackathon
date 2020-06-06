@@ -4,8 +4,6 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 def home(request):
-    comment = 
-    posts_editor = Post_editor.objects.all
-    return render(request, 'home.html', {'posts_youtuber' : posts_youtuber, 'posts_editor' : posts_editor})
-
-def list_editor(request)
+    comment_editor = Comment_editor.object.all
+    post_editor = Post_editor.objects.all
+    return render(request, 'home.html', {'post_editor' : post_editor, 'comment_editor' : comment_editor})
