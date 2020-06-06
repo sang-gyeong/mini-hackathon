@@ -7,7 +7,7 @@
 
 {% block content %}
 <div class="top">
-    <p class="top_text"><strong>ㅇㅇ명의 실력있는 편집자</strong>가<br>유튜버님을 기다리고 있어요!</p>
+    <p class="top_text"><strong>178명의 실력있는 편집자</strong>가<br>유튜버님을 기다리고 있어요!</p>
     <a href="{% url 'new_editor' %}"><div class="new_button">편집자 등록하러 가기</div></a>
 </div>
 <div class="filter_box">
@@ -59,20 +59,20 @@
 
 <div class="submit_button">
     <button>나에게 맞는 편집자 보기</button>
-
+<!-- 
    <select class="sort" name="sort">
        <option value='all' selected>정렬 순서</option>
        <option value='newest'>최신 순</option>
        <option value='rate'>별점 순</option>
        <option value='review'>리뷰 순</option>
-    </select>
+    </select> -->
 </div>
 <div class="post_box">
     {% for editor in post_editor %}
     <a href="{% url 'detail_editor' editor.pk %}">
     <div class="post_item" style="background-image : url('{{editor.img}}'); background-size : cover;">
-         <div class="post_item_top" >
-         <div class="post_item_hashtag">#브이로그 #뷰티</div>
+        <div class="post_item_top" >
+        <div class="post_item_hashtag">#브이로그 #뷰티</div>
            
             <button class="like_button"><img src="{% static 'ic-favorite-border-24-px.png' %}"></button>
         </div>

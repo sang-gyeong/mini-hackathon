@@ -1,3 +1,6 @@
+a{
+    text-decoration: none;
+}
 .top{
     padding-top: 22px;
     padding-left: 30px;
@@ -104,6 +107,7 @@ select{
     justify-content: space-between;
     box-sizing: border-box;
     padding-top: 10px;
+    color: black;
 }
 
 .post_item_top{

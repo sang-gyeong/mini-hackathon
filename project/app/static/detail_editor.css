@@ -1,0 +1,161 @@
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    width: 100%;
+    margin:0px;
+}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    margin:0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.header{
+    width: 100%;
+    height: 54px;
+    background-image: linear-gradient(to right,#b8d2fc,#97e9fd);
+    display: flex;
+    margin: 0px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+.logo {
+    margin-left: 10px;
+}
+.nav{
+    display: flex;
+    width: 210px;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+
+.footer{
+    width: 100%;
+    font-size: 10px;
+    font-weight: 200;
+    padding:30px;
+    padding-top: 10px;
+    border-top: lightgray solid 1px;
+    box-sizing: border-box;
+}
+
+.footer_introduce1{
+    width: 300px;
+    line-height: 15px;
+}
+
+span{
+    margin-right:8px;
+}
+
+.copyright{
+    margin-bottom: 60px;
+}
+
+
+.edit_button{
+  border : 1px #303030 solid;
+  padding-left : 7px;
+}
+
+.title_text{
+  font-weight : 600;
+  text-align : center;
+    margin-left : auto;
+  margin-right : auto;
+  width : 90%;
+}
+
+
+.profile_box{
+  background-color : lightblue;
+    margin-left : auto;
+  margin-right : auto;
+  width : 90%;
+}
+
+
+.nav_box{
+  background-color : white;
+  height : 40px;
+  display : flex;
+  align-items : center;
+  justify-content : space-around;
+    margin-left : auto;
+  margin-right : auto;
+  width : 90%;
+  
+}
+
+.intro_box{
+  margin-left : auto;
+  margin-right : auto;
+  width : 90%;
+}
+
+.price_box{
+    margin-left : auto;
+  margin-right : auto;
+  width : 90%;
+}
+
+h6{
+  background-color : #5196cc;
+  color : white;
+  padding : 6px;
+  display : inline-block;
+  margin : 0;
+  font-size : 1.15rem;
+}
+
+.review_box, .info_box{
+      margin-left : auto;
+  margin-right : auto;
+  width : 90%;
+  
+}
+
+.review_list_item{
+  border : 1px #303030 solid;
+  margin-top : 2px;
+}
+
+.review_datetime{
+  background-color : #5196cc;
+  color : white;
+  padding-left : 5px;
+}
+
+
+.bottom{
+  background-color : #5196cc;
+  display : flex;
+  justify-content : space-around;
+  height : 50px;
+  align-items : center;
+  
+}
+
+
+
+
+bottom a{
+  
+  text-decoration : none;
+  color : white;
+  font-size : 1.2rem;
+  font-weight : 600;
+  
+}

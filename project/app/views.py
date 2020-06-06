@@ -137,8 +137,6 @@ def new_youtuber(request):
             work =request.POST['work'],
             career = request.POST['career'],
             period = request.POST['period'],
-            genre = request.POST['genre'],
-            rating = request.POST['rating'],
             img = s3_url + file_to_upload.name
         )
         return redirect('detail_youtuber', new_post.pk)

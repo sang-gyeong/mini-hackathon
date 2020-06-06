@@ -2,15 +2,16 @@
 {% load static %}
 
 {% block head %}
-<link rel="stylesheet" href="{% static 'login.css' %}" type='text/css'>
 {% endblock head %}
 
-    {% block content %}
-    <form class="login_box" method="POST"> 
+{% block content %}
+<link rel="stylesheet" href="{% static 'registration/login.css' %}" type='text/css'>
+   <div class="login_box2">
+    <form class="login_box1" method="POST"> 
         {% csrf_token %}
         <h3 class="login_title">로그인</h3>
         {% if error %}
-        <p class="error_message" style="color : tomato;">{{ error }}</p>
+        <p class="error_message" style="color : red;">{{ error }}</p>
         {% endif %}
         <div class="login_wrapper">
             <input type="text" name="username" placeholder="ID">
@@ -21,7 +22,7 @@
         </div>
         <a class="signup_ask" href="{% url 'signup' %}">아직 회원이 아니세요?</a>
     </form>
+   </div>
     {% endblock content %}
 </body>
 </html>
-
