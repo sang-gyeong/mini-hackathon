@@ -10,16 +10,72 @@
 </head>
 <body>
     {% block content %}
+    {% if user.is_authenticated %}
     <div class="top">
-        <div>오늘도,</div>
-        <div>00명의 유튜버와 00명의 편집자가</div>
-        <div>편-안에서 만나고 있습니다.</div>
+        <div>안녕하세요 00님</div>
+        <div>편-안에서 안심하고</div>
+        <div>편집자를 찾아보세요!</div>
     </div>
     <div class="best">
         <div class="title">이번주의 BEST 편집자</div>
         <div class="content">
-            <div class="video"></div>
-            <div class="videocontent"></div>
+            <div class="videos">
+                <div class="video">비디오</div>
+                <div class="videocontent">내용</div>
+            </div>
+            <div class="videos">
+                <div class="video">비디오</div>
+                <div class="videocontent">내용</div>
+            </div>
+            <div class="videos">
+                <div class="video">비디오</div>
+                <div class="videocontent">내용</div>
+            </div>
+        </div>
+    </div>
+    <div class="explore">
+        <div class="title">마음껏 둘러보기</div>
+        <div class="content">
+            <div class="explore_video">비디오</div>
+            <div class="explore_video">비디오</div>
+            <div class="explore_video">비디오</div>
+        </div>
+    </div>
+    <div class="review">
+        <div class="title">실시간 리뷰</div>
+        <div class="content">
+            <div class="review_text">리뷰</div>
+            <div class="review_text">리뷰</div>
+            <div class="review_text">리뷰</div>
+            <div class="review_text">리뷰</div>
+        </div>
+    </div>
+    <a class="nav-item" href="{% url 'list_editor' %}">
+        <div class="button">
+            더 많은 편집자 보러가기>
+        </div>
+    </a>
+    {% endif %}
+    <div class="top">
+        <div>오늘도,</div>
+        <div>00명의 유튜버와 00명의 편집자가</div>
+        <div>편-안에서 만나고 있습니다.</div>
+    </div>d
+    <div class="best">
+        <div class="title">이번주의 BEST 편집자</div>
+        <div class="content">
+            <div class="videos">
+                <div class="video">비디오</div>
+                <div class="videocontent">내용</div>
+            </div>
+            <div class="videos">
+                <div class="video">비디오</div>
+                <div class="videocontent">내용</div>
+            </div>
+            <div class="videos">
+                <div class="video">비디오</div>
+                <div class="videocontent">내용</div>
+            </div>
         </div>
     </div>
     <div class="inquiry">
@@ -59,9 +115,11 @@
                 </div>
             </div>
         </div>
-        <div class="button">
-            <button>00명의 편집자 보러가기></button>
-        </div>
+        <a class="nav-item" href="{% url 'list_editor' %}">
+            <div class="button">
+                00명의 편집자 보러가기>
+            </div>
+        </a>
     </div>
     {% endblock content %}
 </body>
