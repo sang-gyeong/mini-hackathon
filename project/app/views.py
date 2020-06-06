@@ -9,6 +9,7 @@ def home(request):
     post_editor = Post_editor.objects.all
     return render(request, 'home.html', {'comment_editor' : comment_editor, 'post_editor' : post_editor})
 
+
 def list_editor(request):
     post_editor = Post_youtuber.objects.all
     return render(request, 'list_editor.html', {'post_editor' : post_editor})
