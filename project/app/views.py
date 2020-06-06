@@ -14,3 +14,4 @@ def list_editor(request):
     posts_editor = Post_editor.objects.all
     return render(request, 'home.html', {'posts_youtuber' : posts_youtuber, 'posts_editor' : posts_editor})
 
+
