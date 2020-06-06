@@ -62,7 +62,8 @@ class Apply(models.Model):
     content = models.TextField()
     datetime = models.DateTimeField()
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='apply')
-    url = models.TextField()
+    reference = models.TextField()
    
     def __str__(self):
         return self.title
+
