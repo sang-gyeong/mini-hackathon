@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Post_youtuber, Post_editor, Comment
+from .models import Post_youtuber, Post_editor, Comment_youtuber, Comment_editor
 from django.contrib.auth.models import User 
 from django.contrib import auth
 
@@ -12,4 +12,6 @@ def home(request):
 def list_editor(request):
     post_editor = Post_youtuber.objects.all
     return render(request, 'list_editor.html', {'post_editor' : post_editor})
+
+
 
