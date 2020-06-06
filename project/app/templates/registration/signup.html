@@ -1,9 +1,8 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    {% extends 'base.html' %}
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +14,7 @@
 </head>
 
 <body>
-    <total>
+    {% block content %}
         <form class="signup_box" method="POST">
         {% csrf_token %}
         <h1 class="signup_title">회원가임</h1>
@@ -28,6 +27,6 @@
             <button class="signup_button"type="submit">가입하기</button>
         </div>
         </form>
-    </total>
+    {% endblock content %}
 </body>
 </html>

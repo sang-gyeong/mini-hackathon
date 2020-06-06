@@ -15,6 +15,7 @@ class Post_youtuber(models.Model):
     genre = models.TextField(null=True)
     rating = models.TextField(null=True)
     vid_url = models.TextField(null=True)
+    price = models.TextField(null=True)
 
     def __str__(self):
         return self.title
@@ -32,6 +33,12 @@ class Post_editor(models.Model):
     genre = models.TextField(null=True)
     rating = models.TextField(null=True)
     vid_url = models.TextField(null=True)
+    basic_content = models.TextField(null=True)
+    basic_price = models.TextField(null=True)
+    standard_content = models.TextField(null=True)
+    standard_price = models.TextField(null=True)
+    premium_content = models.TextField(null=True)
+    premium_price = models.TextField(null=True)
 
     def __str__(self):
         return self.title
