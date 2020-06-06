@@ -1,21 +1,11 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
+{% block head %}
+<link rel="stylesheet" href="{% static 'login.css' %}" type='text/css'>
+{% endblock head %}
 
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'registration.css' %}">
-    <title>Document</title>
-</head>
-
-<body>
-  <total>
+    {% block content %}
     <form class="login_box" method="POST"> 
         {% csrf_token %}
         <h3 class="login_title">로그인</h3>
@@ -32,6 +22,7 @@
         </div>
         <a class="signup_ask" href="{% url 'signup' %}">아직 회원이 아니세요?</a>
     </form>
+    {% endblock content %}
 </body>
 </html>
 

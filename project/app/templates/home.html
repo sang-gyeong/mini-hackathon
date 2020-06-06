@@ -5,7 +5,6 @@
 <link rel="stylesheet" href="{% static 'home.css' %}" type='text/css'>
 {% endblock head %}
 
-
     {% block content %}
     {% if user.is_authenticated %}
     <div class="top">
@@ -85,30 +84,30 @@
             <div class="q1">
                 <div class="q1_text">1. 원하시는 <strong>영상 종류</strong>가 있으신가요?</div>
                 <div class="q1_option">
-                    <input type="checkbox" name="chk_info" value="브이로그">브이로그
-                    <input type="checkbox" name="chk_info" value="뷰티">뷰티
-                    <input type="checkbox" name="chk_info" value="게임">게임
-                    <input type="checkbox" name="chk_info" value="스트리밍">스트리밍
-                    <input type="checkbox" name="chk_info" value="음악">음악
-                    <input type="checkbox" name="chk_info" value="요리">요리
-                    <input type="checkbox" name="chk_info" value="기타">기타
+                    <input type="radio" name="chk_info" value="all">전체
+                    <input type="radio" name="chk_info" value="vlog">브이로그
+                    <input type="radio" name="chk_info" value="beauty">뷰티
+                    <input type="radio" name="chk_info" value="game">게임
+                    <input type="radio" name="chk_info" value="streaming">스트리밍
+                    <input type="radio" name="chk_info" value="music">음악
+                    <input type="radio" name="chk_info" value="cook">요리
                 </div>
             </div>
             <div class="q2">
                 <div class="q2_text">2. 편집자의 <strong>장기 고용</strong>을 원하시나요?</div>
                 <div class="q2_option">
-                    <input type="radio" name="chk_info" value="예">예
-                    <input type="radio" name="chk_info" value="아니오">아니오
+                    <input type="radio" name="chk_info" value="long">예
+                    <input type="radio" name="chk_info" value="short">아니오
                 </div>
             </div>
             <div class="q3">
                 <div class="q3_text">3. 원하시는 <strong>근무형태</strong>가 있으신가요?</div>
                 <div class="q3_option">
-                    <input type="checkbox" name="chk_info" value="영상촬영">영상촬영
-                    <input type="checkbox" name="chk_info" value="영상편집">영상편집
-                    <input type="checkbox" name="chk_info" value="썸네일">썸네일
-                    <input type="checkbox" name="chk_info" value="자막">자막
-                    <input type="checkbox" name="chk_info" value="기타">기타
+                    <input type="radio" name="chk_info" value="all">전체
+                    <input type="radio" name="chk_info" value="shoot">영상촬영
+                    <input type="radio" name="chk_info" value="edit">영상편집
+                    <input type="radio" name="chk_info" value="subtitle">자막
+                    <input type="radio" name="chk_info" value="thumbnail">썸네일
                 </div>
             </div>
         </div>
