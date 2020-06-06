@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'base.html' %}
+    {% load static %} 
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'form_to_editor.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <div class="content">
+        <div class="q1">
+            <div class="q1_text">1. 채용 하시겠습니까?</div>
+            <div class="q1_option">
+                <input type="radio" name="chk_info" value="예">예
+                <input type="radio" name="chk_info" value="아니오">아니오. 
+            </div>
+        </div>
+        <div class="q2">
+            <div class="q2_text">2. 편안 사이트에 공고를 등록하셨나요?</div>
+            <div class="q2_option">
+                <input type="radio" name="chk_info" value="예">예
+                <input type="radio" name="chk_info" value="아니오">아니오
+            </div>
+        </div>
+        <div class="q3">
+            <div class="q3_text">3. 공고를 편집자에게 공유하시겠습니까?</div>
+            <div class="q3_option">
+                <input type="radio" name="chk_info" value="예">예
+                <input type="radio" name="chk_info" value="아니오">아니오. 직접 등록하겠습니다.
+            </div>
+        </div>
+        <form action="url" method="post"> 
+            <div class="q4">
+                <div class="q4_text">4. 포트폴리오 업로드
+                    <input type="file" name="업로드" value="파일">
+                </div>
+            </div>
+        </form>
+        <div class="q5">
+            <div class="q5_text">5. 주의사항을 읽어보셨나요?</div>
+            <div class="q5_option">
+                <input type="radio" name="chk_info" value="예">예
+                <input type="radio" name="chk_info" value="아니오">아니오.
+            </div>
+        </div>
+        <div class="q6">
+            <div class="q6_text">6. 정말 채용을 하시겠습니까?</div>
+            <div class="q6_option">
+                <input type="radio" name="chk_info" value="예">예
+                <input type="radio" name="chk_info" value="아니오">아니오.
+            </div>
+        </div>
+    

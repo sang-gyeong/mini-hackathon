@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'base.html' %}
+    {% load static %} 
+    <link rel="stylesheet" type="text/css" href="{% static 'todo.css' %}"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <div class="top">
+        <h3>편집자 등록하기</h3>
+        <div class="top_information">
+            <div class="top_information_text">개인정보</div>
+            <a><div class="top_information_img">프로필 등록하러 가기</div></a>
+        </div>
+    </div>
+    <div class="content_box">필수정보
+        <div class="content1">
+            <div class="content1_text">편집 가능 툴</div>
+            <div class="content1_option">
+                <input type="radio" name="content_info" value="프리미어프로">프리미어프로
+                <input type="radio" name="content_info" value="애프터이펙트">애프터이펙트
+                <input type="radio" name="content_info" value="파이널컷">파이널컷
+                <input type="radio" name="content_info" value="베가스">베가스
+                <input type="radio" name="content_info" value="포토샵">포토샵
+                <input type="radio" name="content_info" value="일러스트">일러스트
+                <input type="radio" name="content_info" value="Blender">Blender
+                <input type="radio" name="content_info" value="Maya">Maya
+            </div>
+        </div> 
+        <div class="content2">
+            <div class="content2_text">희망 근무 형태</div>
+            <div class="content2_option">
+                <input type="radio" name="content_info" value="영상촬영">영상촬영
+                <input type="radio" name="content_info" value="영상편집">영상편집
+                <input type="radio" name="content_info" value="자막">자막
+                <input type="radio" name="content_info" value="썸네일">썸네일
+                <input type="radio" name="content_info" value="기타">기타 
+            </div>
+        </div>
+        <div class="content3">
+            <div class="content3_text">희망 급여
+                <br><p>유튜버가 선택할 수 있는 BASIC, STANDARD, PREMIUM 가격을 설정해주세요</p>
+            </div>
+            <div class="content3_option">
+                <input type="radio" name="content_info" value="BASIC">BASIC
+                <input type="radio" name="content_info" value="STANDARD">STANDARD
+                <input type="radio" name="content_info" value="PREMIUM">PREMIUM
+
+
+
+        <div class="content4">
+            <div class="content4_text">상세 정보
+                <br><p>자신을 표현할 수 있는 내용을 기입해주세요</p>
+            </div>
+            <div class="content4_option">
+                <input type="text" name="content_info" value="">
+                <input type="file" name="cotent_info" value="">
+                <input type="url" name="content_info">유튜브 링크 첨부하기
+            </div>
+        </div>
