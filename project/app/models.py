@@ -47,3 +47,4 @@ class Comment_editor(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments_e')
     rate = models.IntegerField()
     datetime = models.DateTimeField()
+
