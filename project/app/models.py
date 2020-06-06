@@ -7,7 +7,7 @@ class Post_youtuber(models.Model):
     content = models.TextField()
     datetime = models.DateTimeField()
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='youtuber')
-    img = models.TextField()
+    img = models.TextField(null=True)
     tool = models.TextField(null=True)
     work = models.TextField(null=True)
     career = models.TextField(null=True)
@@ -22,10 +22,10 @@ class Post_youtuber(models.Model):
 
 class Post_editor(models.Model):
     title = models.CharField(max_length=200)
-    content = models.TextField()
-    datetime = models.DateTimeField()
+    content = models.TextField(null=True)
+    datetime = models.DateTimeField(null=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='editor')
-    img = models.TextField()
+    img = models.TextField(null=True)
     tool = models.TextField(null=True)
     work = models.TextField(null=True)
     career = models.TextField(null=True)

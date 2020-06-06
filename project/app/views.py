@@ -21,7 +21,7 @@ def list_editor(request):
 
 def list_youtuber(request):
     post_youtuber = Post_youtuber.objects.all
-    return render(request, 'list_editor.html', {'post_youtuber' : post_youtuber})
+    return render(request, 'list_youtuber.html', {'post_youtuber' : post_youtuber})
 
 @login_required(login_url='/registration/login')
 def detail_editor(request, post_pk):
@@ -52,7 +52,10 @@ def detail_youtuber(request, post_pk):
         )
         return redirect('detail_youtuber', post_pk)
     return render(request, 'detail_youtuber.html', {'post' : post})
+<<<<<<< HEAD
 
+=======
+>>>>>>> 396884b75fad87c22b046c4bf76cd33b618fb661
 
 def form_to_editor(request):
     if (request.method == 'POST'):
@@ -266,6 +269,4 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('home')
-
-
 
