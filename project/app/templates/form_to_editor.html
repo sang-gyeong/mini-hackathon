@@ -6,55 +6,23 @@
 {% endblock head %}
 
     {% block content %}
-    <div class="content">
+    <form class="" method="POST">
+        {% csrf_token %}
         <div class="q1">
-            <div class="q1_text">1. 지원을 하시겠습니까?</div>
-            <div class="q1_option">
-                <input type="radio" name="chk_info" value="예">예
-                <input type="radio" name="chk_info" value="아니오">아니오. 
+            <div class="q1_text">신청</div>
+                <input type="text" name="title" placeholder="">
             </div>
         </div>
         <div class="q2">
-            <div class="q2_text">2. 편안 사이트에 포트폴리오를 등록하셨나요?</div>
-            <div class="q2_option">
-                <input type="radio" name="chk_info" value="예">예
-                <input type="radio" name="chk_info" value="아니오">아니오
+            <div class="q2_text">요구사항을 자유사항으로 *자세히* 입력해주세요</div>
+                <input type="text" name="content" placeholder="ex) 자막은 현지 문화에 맞게...">
             </div>
         </div>
         <div class="q3">
-            <div class="q3_text">3. 편안 포트폴리오를 불러오시겠습니까?</div>
-            <div class="q3_option">
-                <input type="radio" name="chk_info" value="예">예
-                <input type="radio" name="chk_info" value="아니오">아니오. 직접 등록하겠습니다.
-            </div>
+            <div class="q3_text">참고했으면 하는 레퍼런스 주소 입력</div>
+                <input type="url" name="reference" placeholder="http://">
         </div>
-        <form action="url" method="post"> 
-            <div class="q4">
-                <div class="q4_text">4. 포트폴리오 업로드
-                    <input type="url" name="포트폴리오">url을 입력해주세요
-                    <input type="url" name="포트폴리오">url을 입력해주세요
-                    <input type="url" name="포트폴리오">url을 입력해주세요
-                    <input type="file" name="업로드" value="파일">
-                    <input type="file" name="업로드" value="파일">
-                    <input type="file" name="업로드" value="파일">
-                </div>
-            </div>
-        </form>
-        <div class="q5">
-            <div class="q5_text">5. 주의사항을 읽어보셨나요?</div>
-            <div class="q5_option">
-                <input type="radio" name="chk_info" value="예">예
-                <input type="radio" name="chk_info" value="아니오">아니오.
-            </div>
-        </div>
-        <div class="q6">
-            <div class="q6_text">6. 정말 지원을 하시겠습니까?</div>
-            <div class="q6_option">
-                <input type="radio" name="chk_info" value="예">예
-                <input type="radio" name="chk_info" value="아니오">아니오.
-            </div>
-        </div>
-    </div>
+    </form>
     {% endblock content %}
 </body>
 </html>

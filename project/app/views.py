@@ -47,10 +47,6 @@ def detail_youtuber(request, post_pk):
         )
         return redirect('detail_youtuber', post_pk)
     return render(request, 'detail_youtuber.html', {'post' : post})
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 
 
 
@@ -104,8 +100,4 @@ def new_youtuber(request):
         return redirect('detail_youtuber', new_post.pk)
 
     return render(request, 'new_youtuber.html')
-
-
-def edit_editor(request):
-    if (request.method )
 
