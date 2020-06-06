@@ -103,7 +103,6 @@ def new_editor(request):
             tool = request.POST['tool'],
             work =request.POST['work'],
             career = request.POST['career'],
-            period = request.POST['period'],
             genre = request.POST['genre'],
             rating = request.POST['rating'],
             img = s3_url+str(request.user.pk)+'/'+now + file_to_upload.name
