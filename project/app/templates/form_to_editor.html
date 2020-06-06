@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% extends 'base.html' %}
-    {% load static %} 
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'form_to_editor.css' %}">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'form_to_editor.css' %}" type='text/css'>
+{% endblock head %}
+
     {% block content %}
     <div class="content">
         <div class="q1">
@@ -59,7 +54,9 @@
                 <input type="radio" name="chk_info" value="아니오">아니오.
             </div>
         </div>
-    
-
+    </div>
+    {% endblock content %}
+</body>
+</html>
         
        
