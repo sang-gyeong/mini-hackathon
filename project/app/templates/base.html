@@ -6,30 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <title>편-안</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}"">
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
     {% block head %}
     {% endblock head %}
 
 </head>
 <body>
-    
-<!-- src 뒤에 '편안' 이미지 넣어야 함-->
-<!-- 로그인전 home에서는 'MY' 대신 '로그인 or 회원가입'으로 block해야 함 -->
-
     <div class ="header">
         <div class="logo">
             <p><strong>편 - 안</strong></p>
         </div>
-    <!-- 곰 사진임. 편안 로고 올려야함 -->
         <div class="nav">
             <div class="nav-item">
-                <a>편집자 모집</a>
+                <a href="{% url 'list_youtuber' %}">편집자 모집</a>
             </div>
             <div class="nav-item">
-                <a>에디터 프로필</a>
+                <a href="{% url 'list_editor' %}">에디터 프로필</a>
             </div>
             <div class="nav-item">
-                <a>로그인</a>
+                <a href="{% url 'login' %}">로그인</a>
             </div>
         </div> 
     </div>
@@ -47,7 +42,7 @@
             <span>채용 정보</span><span>도움말</span>
         </div>
         <div class="footer_introduce2">
-            <!-- <img src="logo2.png"" width="144" height="54" alt="편안 로고">  -->
+            <img src="logo2.png" width="144" height="54" alt="편안 로고"> 
             <div class="customer"> 
                 <div class="phone">
                     <p>

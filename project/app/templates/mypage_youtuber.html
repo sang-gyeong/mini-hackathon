@@ -4,11 +4,11 @@ a{% block content %}
     <div class="profile">
         <div class="username">{{user.username}}님의 마이페이지</div>
         <div class="link">
-            <a class="nav-item" href="{% url 'edit_youtuber' %}">
-                <div class="button">개인정보 수정</div>
-            </a>
             <a class="nav-item" href="{% url 'chat' %}">
-                <div class="button">쪽지함</div>
+                <div class="button">내 쪽지함</div>
+            </a>
+            <a class="nav-item" href="{% url 'logout' %}">
+                <div class="button">로그아웃</div>
             </a>
         </div>
     </div>
