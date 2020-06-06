@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% extends 'base.html' %}
-    {% load static %} 
-    <link rel="stylesheet" type="text/css" href="{% static 'new_editor.css' %}"> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'new_editor.css' %}"> 
+{% endblock head %}
+
+
+
     {% block content %}
     <div class="top">
         <h3>편집자 등록하기</h3>
