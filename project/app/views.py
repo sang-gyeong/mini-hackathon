@@ -12,7 +12,8 @@ from boto3.session import Session
 def home(request):
     comment_editor = Comment_editor.objects.all()
     post_editor = Post_editor.objects.all()
-    return render(request, 'home.html', {'comment_editor' : comment_editor, 'post_editor' : post_editor})
+    post_youtuber = Post_youtuber.objects.all()
+    return render(request, 'home.html', {'comment_editor' : comment_editor, 'post_editor' : post_editor, 'post_youtuber' : post_youtuber})
 
 
 def list_editor(request):
