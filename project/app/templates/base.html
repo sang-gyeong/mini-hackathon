@@ -9,12 +9,12 @@
     <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
     {% block head %}
     {% endblock head %}
-
 </head>
+
 <body>
     <div class ="header">
         <div class="logo">
-            <p><strong>편 - 안</strong></p>
+            <a href="{% url 'home' %}"><strong>편 - 안</strong></a>
         </div>
         <div class="nav">
             <div class="nav-item">
@@ -23,13 +23,20 @@
             <div class="nav-item">
                 <a href="{% url 'list_editor' %}">에디터 프로필</a>
             </div>
+            {% if user.is_authenticated %}
+            <div class="nav-item">
+                <a href="{% url 'logout' %}">로그아웃</a>
+            </div>
+            <div class="nav-item">
+                <a href="{% url 'mypage_youtuber' user.pk %}">MY</a>
+            </div>
+            {% else %}
             <div class="nav-item">
                 <a href="{% url 'login' %}">로그인</a>
             </div>
+            {% endif %}
         </div> 
     </div>
-
-
     <div class ="total"> 
         {% block content %}{% endblock content %}
     </div>

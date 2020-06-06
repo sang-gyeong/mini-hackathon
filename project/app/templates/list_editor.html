@@ -8,7 +8,9 @@
 {% block content %}
 <div class="top">
     <p class="top_text"><strong>ㅇㅇ명의 실력있는 편집자</strong>가<br>유튜버님을 기다리고 있어요!</p>
-    <a href="{% url 'new_editor' %}"><div class="new_button">편집자 등록하러 가기</div></a>
+    <a href="{% url 'new_editor' %}">
+        <div class="new_button">편집자 등록하러 가기</div>
+    </a>
 </div>
 <div class="filter_box">
     <select name="tool">
@@ -23,7 +25,7 @@
         <option value='maya'>Maya</option>
     </select>
 
-     <select name="work">
+    <select name="work">
         <option value='all' selected>근무 형태별</option>
         <option value='shoot'>영상촬영</option>
         <option value='edit'>영상편집</option>
@@ -32,14 +34,14 @@
         <option value='finalcut'>기타</option>
     </select>
 
-     <select name="career">
+    <select name="career">
         <option value='all' selected>경력</option>
         <option value='newbee'>경력무관</option>
         <option value='one_five'>1-5년</option>
         <option value='five_ten'>5년 이상</option>
     </select>
 
-     <select name="period">
+    <select name="period">
         <option value='all' selected>근무 기간별</option>
         <option value='long'>장기</option>
         <option value='shot'>단기</option>
@@ -60,18 +62,19 @@
 <div class="submit_button">
     <button>나에게 맞는 편집자 보기</button>
 
-   <select class="sort" name="sort">
-       <option value='all' selected>정렬 순서</option>
-       <option value='newest'>최신 순</option>
-       <option value='rate'>별점 순</option>
-       <option value='review'>리뷰 순</option>
+    <select class="sort" name="sort">
+        <option value='all' selected>정렬 순서</option>
+        <option value='newest'>최신 순</option>
+        <option value='rate'>별점 순</option>
+        <option value='review'>리뷰 순</option>
     </select>
 </div>
 <div class="post_box">
     {% for editor in post_editor %}
-    <div class="post_item">
+    <div class="post_item" style="background-image : url('{{editor.img}}'); background-size : cover;">
         <div class="post_item_top">
             <div class="post_item_hashtag">#브이로그 #뷰티</div>
+
             <button class="like_button"><img src="{% static 'ic-favorite-border-24-px.png' %}"></button>
         </div>
         <div class="post_item_bottom">
@@ -81,7 +84,7 @@
             <div class="line">
             </div>
             <div class="post_item_price">
-                <p class="post_item_price_text">분당 <strong>{{ editor.basic_price }}</strong> 만원</p>
+                <p class="post_item_price_text"><strong>{{ editor.basic_content }}</strong></p>
             </div>
         </div>
     </div>
