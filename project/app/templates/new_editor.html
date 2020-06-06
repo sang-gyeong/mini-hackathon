@@ -13,7 +13,8 @@
     <div class="top">
         <h3>편집자 등록하기</h3>
         <div class="top_information">
-            <div class="top_information_text">개인정보</div>
+            <div class="top_information_text">기본정보</div>
+            <
             <a><div class="top_information_img">프로필 등록하러 가기</div></a>
         </div>
     </div>
@@ -21,24 +22,24 @@
         <div class="content1">
             <div class="content_text">편집 가능 툴</div>
             <div class="content1_option">
-                <input type="radio" name="content_info" value="프리미어프로">프리미어프로
-                <input type="radio" name="content_info" value="애프터이펙트">애프터이펙트
-                <input type="radio" name="content_info" value="파이널컷">파이널컷
-                <input type="radio" name="content_info" value="베가스">베가스
-                <input type="radio" name="content_info" value="포토샵">포토샵
-                <input type="radio" name="content_info" value="일러스트">일러스트
-                <input type="radio" name="content_info" value="Blender">Blender
-                <input type="radio" name="content_info" value="Maya">Maya
+                <input type="checkbox" name="tool" value="pro">프리미어프로
+                <input type="checkbox" name="tool" value="aftereffect">애프터이펙트
+                <input type="checkbox" name="tool" value="finalcut">파이널컷
+                <input type="checkbox" name="tool" value="vegas">베가스
+                <input type="checkbox" name="tool" value="photoshop">포토샵
+                <input type="checkbox" name="tool" value="illust">일러스트
+                <input type="checkbox" name="tool" value="Blender">Blender
+                <input type="checkbox" name="tool" value="Maya">Maya
             </div>
         </div> 
         <div class="content2">
             <div class="content_text">희망 근무 형태</div>
             <div class="content2_option">
-                <input type="radio" name="content_info" value="영상촬영">영상촬영
-                <input type="radio" name="content_info" value="영상편집">영상편집
-                <input type="radio" name="content_info" value="자막">자막
-                <input type="radio" name="content_info" value="썸네일">썸네일
-                <input type="radio" name="content_info" value="기타">기타 
+                <input type="checkbox" name="work" value="shoot">영상촬영
+                <input type="checkbox" name="work" value="edit">영상편집
+                <input type="checkbox" name="work" value="subtitle">자막
+                <input type="checkbox" name="work" value="thumbnail">썸네일
+                <input type="checkbox" name="work" value="etc">기타 
             </div>
         </div>
         <div class="content3">
@@ -49,30 +50,30 @@
                 <div class="BASIC">BASIC
                     <div class="BASIC_Content">
                         <span class="BC">내용</span>
-                        <input type="text" value="내용을 입력하세요. ex) 간단한 자막 편집, 영상 촬영만">
+                        <input type="text" name="basic_content" placeholder="내용을 입력하세요. ex) 간단한 자막 편집, 영상 촬영만">
                     </div>
                     <div class="BASIC_Price">
                         <span class="BP">가격</span>
-                        <input type="text" value="가격을 입력하세요. ex) 분당 1만원">
+                        <input type="text" name="basic_price" placeholder="가격을 입력하세요. ex) 분당 1만원">
                     </div>
                 <div class="STANDARD">STANDARD
                     <div class="STANDARD_Content">
                         <span class="SC">내용</span>
-                        <input type="text" value="내용을 입력하세요. ex) 포토샵, 썸네일 및 정교한 편집 작업">
+                        <input type="text" name="standard_content" placeholder="내용을 입력하세요. ex) 포토샵, 썸네일 및 정교한 편집 작업">
                     </div>
                     <div class="STANDARD_Price">
                         <span class="SP">가격</span>
-                        <input type="text" value="가격을 입력하세요. ex) 분당 2만원">
+                        <input type="text" name="standard_price" placeholder="가격을 입력하세요. ex) 분당 2만원">
                     </div>
                 </div>
                 <div class="PREMIUM">PREMIUM
                     <div class="PREMIUM_Content">
                         <span class="PC">내용</span>
-                        <input type="text" value="내용을 입력하세요. ex) 에펙을 이용한 고도화된 편집 작업">
+                        <input type="text" name="premium_content" placeholder="내용을 입력하세요. ex) 에펙을 이용한 고도화된 편집 작업">
                     </div>
                     <div class="PREMIUM_Price">
                         <span class="PP">가격</span>
-                        <input type="text" value="가격을 입력하세요. ex) 분당 3만원">
+                        <input type="text" name="premium_price" placeholder="가격을 입력하세요. ex) 분당 3만원">
                     </div>
         <div class="content4">
             <div class="content_box">상세 정보
@@ -80,15 +81,13 @@
             </div>
             <div class="content4_option">
                 <input type="text" name="content_info" value="">
-                <input type="file" name="cotent_info" value="">
-                <input type="url" name="content_info">유튜브 링크 첨부하기
+                <input class="img_file" type="file" name="img">
+                <span>유튜브 링크 첨부하기</span>
+                <input type="text" name="vid_url" placeholder="http://...">
             </div>
         </div>
         <div class="contnet5">
-            <div class="content_box">유튜버가 유의해야할 점</div>
-            <div class="content5_option">
-                <input type="text" name="contnet_info" value="수정 사항은 3회까지 가능합니다, 분당/건당 둘 다 가능합니다">
-            </div>
+            <input type="text" name="content" placeholder="수정 사항은 3회까지 가능합니다, 분당/건당 둘 다 가능합니다">
         </div>
     </div>
     {% endblock content %}
