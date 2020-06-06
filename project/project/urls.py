@@ -20,8 +20,8 @@ from app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
-    path('list_youtuber/', views.list_youtuber, name="list_youtuber"),
-    path('list_editor/', views.list_editor, name="list_editor"),
+    # path('list_youtuber/', views.list_youtuber, name="list_youtuber"),
+    # path('list_editor/', views.list_editor, name="list_editor"),
     # path('detail_youtuber/<int:post_pk>', views.detail_youtuber, name="views.detail_youtuber"),
     # path('detail_editor/<int:post_pk>', views.detail_editor, name="views.detail_editor"),
     # path('new_youtuber/', views.new_youtuber, name="new_youtuber"),
