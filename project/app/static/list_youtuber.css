@@ -81,7 +81,6 @@ select{
     font-weight: 700;
 }
 
-
 .post_box{
     width: 100%;
     padding: 10px 30px 10px 30px;
@@ -93,54 +92,53 @@ select{
 }
 
 .post_item{
-    width: 240px;
-    height: 135px;
+    width: 262px;
+    height: 82px;
     border-radius: 10px;
     border: solid 1px #707070;
     background-color: #ffffff;
     margin-bottom: 20px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    padding-left: 11px;
+    padding-right: 9px;
+    font-size: 9px;
+    font-weight: 200;
     box-sizing: border-box;
-    padding-top: 10px;
 }
 
-.post_item_top{
+.post_item_right{
     display: flex;
-    justify-content: space-between;
-    font-size: 10px;
-    font-weight: 200;
-    padding: 0px 5px 0px 10px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
 }
 
-.post_item_bottom{
-    display: flex;
-    justify-content: space-between;
-    border-top: gray solid 1px;
-    padding: 0px 7px 0px 10px;
+.post_item_left{
+    margin-right: 25px;
 }
 
-
-.post_item_price_text{
-    font-weight: 200;
-    font-size: 10px;
+.post_title{
     margin:0px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    font-size:12px;
+    font-weight:600;
 }
 
-
-.post_item_title{
-    font-weight: 700;
-    font-size: 10px;
+.post_author_name{
+    margin-top:11px;
+    margin-bottom:8px;
 }
 
-.post_item_title_text{
-    margin:0px;
-    padding-right: 5px;
-    margin-top:10px;
-    margin-bottom: 10px;
+span{
+    margin-right: 2px;
+}
+
+.post_filter_item{
+    font-weight: 400;
+}
+
+.post_item .line{
+    border-left: gray solid 1px;
 }
 
 .page_num{
@@ -153,6 +151,3 @@ select{
     letter-spacing: 5px;
 }
 
-.post_item_bottom .line{
-    border-left: gray solid 1px;
-}

@@ -17,7 +17,7 @@ def list_editor(request):
 
 def list_youtuber(request):
     post_youtuber = Post_youtuber.objects.all
-    return render(request, 'list_editor.html', {'post_youtuber' : post_youtuber})
+    return render(request, 'list_youtuber.html', {'post_youtuber' : post_youtuber})
 
 def detail_editor(request, post_pk):
     post = Post_editor.objects.get(pk=post_pk)
@@ -47,8 +47,6 @@ def detail_youtuber(request, post_pk):
         )
         return redirect('detail_youtuber', post_pk)
     return render(request, 'detail_youtuber.html', {'post' : post})
-
-
 
 def form_to_editor(request):
     if (request.method == 'POST'):
@@ -100,4 +98,6 @@ def new_youtuber(request):
         return redirect('detail_youtuber', new_post.pk)
 
     return render(request, 'new_youtuber.html')
+
+
 
