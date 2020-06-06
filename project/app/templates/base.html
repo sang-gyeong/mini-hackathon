@@ -1,53 +1,70 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>편-안</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}"">
+    {% block head %}
+    {% endblock head %}
+
 </head>
 <body>
     
 <!-- src 뒤에 '편안' 이미지 넣어야 함-->
 <!-- 로그인전 home에서는 'MY' 대신 '로그인 or 회원가입'으로 block해야 함 -->
 
-    <nav>
+    <div class ="header">
         <div class="logo">
-            <img src="https://th.bing.com/th/id/OIP.dfDAR7qak0XHcdiaTOsQqAAAAA?w=280&h=184&c=7&o=5&dpr=1.5&pid=1.7" alt="편안 로고">
+            <p><strong>편 - 안</strong></p>
         </div>
     <!-- 곰 사진임. 편안 로고 올려야함 -->
-        <div class="logo_content">
-            <a>편집자모집</a>
-            <a>편집자목록</a>
-            <a>MY</a>
+        <div class="nav">
+            <div class="nav-item">
+                <a>편집자 모집</a>
+            </div>
+            <div class="nav-item">
+                <a>에디터 프로필</a>
+            </div>
+            <div class="nav-item">
+                <a>로그인</a>
+            </div>
         </div> 
-    </nav>
+    </div>
 
 
-    <total> 
+    <div class ="total"> 
         {% block content %}{% endblock content %}
-    </total>
+    </div>
 
 
-    <footer>
+    <div class = "footer">
         <div class="footer_introduce1">
             <span>편안소개</span><span>홍보센터</span><span>API</span>
-            <span>개인정보처리방침</span> <span>약관</span><span>위치</span>
-            <span>채용 정보</span><span>언어</span><span>도움말</span>
+            <span>개인정보처리방침</span>
+            <span>채용 정보</span><span>도움말</span>
         </div>
         <div class="footer_introduce2">
-            <img src=https://th.bing.com/th/id/OIP.dfDAR7qak0XHcdiaTOsQqAAAAA?w=280&h=184&c=7&o=5&dpr=1.5&pid=1.7" width="144" height="54" alt="편안 로고"> 
+            <!-- <img src="logo2.png"" width="144" height="54" alt="편안 로고">  -->
             <div class="customer"> 
                 <div class="phone">
-                    <pre>
-                     편안 고객센터<span>02-762-8884</span> (평일 <span>09:00~18:00</span>, 주말·공휴일 휴무)
-                     이메일 : <span>help@comfort.co.kr</span>
-                    </pre>
+                    <p>
+                     편안 고객센터 <br>
+                     02-762-8888 <br>
+                    (평일 09:00~18:00, 주말·공휴일 휴무)
+                     <br>
+                     이메일 : help@comfort.co.kr
+                    </p>
                 </div>
                 <div class="copyright">
-                    <pre>
-                    (주)편안, 우 :  02841, 서울특별시 성북구 안암로 145, 대표 : 멋쟁이사자5
-                    사업자등록 : 113-86-00917, 통신판매업 : 제 1006호, Copyright (c) (주)편한. All rights reserved.
-                    </pre>
+                    <p>
+                    (주)편안, 우 :  02841, 서울특별시 성북구 안암로 145
+                    <br>대표 : 박민정, 박주혜, 윤기석, 이상경
+                    <br>사업자등록 : 113-86-00917, 통신판매업 : 제 1006호
+                    <br>Copyright (c) (주)편안. All rights reserved.
+                    </p>
                 </div>
             </div>
         </div>            
