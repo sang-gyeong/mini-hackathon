@@ -8,6 +8,12 @@ class Post_youtuber(models.Model):
     datetime = models.DateTimeField()
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='youtuber')
     img = models.TextField()
+    tool = models.TextField()
+    work = models.TextField()
+    career = models.TextField()
+    period = models.TextField()
+    genre = models.TextField()
+    rating = models.ForeignKey(Comment_youtuber, on_delete=models.CASCADE, related_name='ratings_y')
 
     def __str__(self):
         return self.title
@@ -18,13 +24,26 @@ class Post_editor(models.Model):
     datetime = models.DateTimeField()
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='editor')
     img = models.TextField()
+    tool = models.TextField()
+    work = models.TextField()
+    career = models.TextField()
+    period = models.TextField()
+    genre = models.TextField()
+    rating = models.ForeignKey(Comment_editor, on_delete=models.CASCADE, related_name='ratings_e')
 
     def __str__(self):
         return self.title
 
-class Comment(models.Model):
-    post = models.ForeignKey(Post_youtuber, on_delete=models.CASCADE, related_name='comments')
+class Comment_youtuber(models.Model):
+    post = models.ForeignKey(Post_youtuber, on_delete=models.CASCADE, related_name='comments_y')
     content = models.TextField()
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments')
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments_y')
+    rate = models.IntegerField()
+    datetime = models.DateTimeField()
+
+class Comment_editor(models.Model):
+    post = models.ForeignKey(Post_editor, on_delete=models.CASCADE, related_name='comments_e')
+    content = models.TextField()
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments_e')
     rate = models.IntegerField()
     datetime = models.DateTimeField()
