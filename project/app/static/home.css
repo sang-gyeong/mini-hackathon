@@ -108,14 +108,31 @@ input{
   height:42px;
   text-align: center;
   padding: 2px;
-  padding-top:7px;
+  padding-top:5px;
   box-sizing: border-box;
   margin-top:20px;
   text-decoration: none;
   color: black;
   box-sizing: border-box;
   font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right:0px;
+  margin-left: 30px;
+  margin-bottom: 30px;
 }
 
+.explore{
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+}
 
-
+.review{
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+}

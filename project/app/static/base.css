@@ -1,3 +1,7 @@
+a{
+    text-decoration: none;
+}
+
 header{
     display: flex;
     flex-direction: column;
@@ -38,6 +42,7 @@ body{
     justify-content: space-between;
     font-size: 13px;
     font-weight: 400;
+    color: black;
 }
 
 
