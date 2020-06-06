@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Post_youtuber, Post_editor, Comment
+from .models import Post_youtuber, Post_editor, Comment_youtuber, Comment_editor
 from django.contrib.auth.models import User 
 from django.contrib import auth
 

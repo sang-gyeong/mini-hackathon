@@ -1,7 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'list_editor.css' %}" type='text/css'>
+{% endblock head %}
+
 {% block content %}
 <div class="top">
-    <p class="top_text">ㅇㅇ명의 실력있는 편집자가<br>유튜버님을 기다리고 있어요!</p>
-    <a><div class="new button">편집자 등록하러 가기</div></a>
+    <p class="top_text"><strong>ㅇㅇ명의 실력있는 편집자</strong>가<br>유튜버님을 기다리고 있어요!</p>
+    <a><div class="new_button">편집자 등록하러 가기</div></a>
 </div>
 <div class="filter_box">
     <select name="tool">
@@ -51,54 +58,62 @@
     </select>
 </div>
 
-<div class="submit_button"><button>나에게 맞는 편집자 보기</button></div>
+<div class="submit_button">
+    <button>나에게 맞는 편집자 보기</button>
 
-   <select name="sort">
-        <option value='newest' selected>최신 순</option>
-        <option value='rate'>별점 순</option>
-        <option value='review'>리뷰 순</option>
+   <select class="sort" name="sort">
+       <option value='all' selected>정렬 순서</option>
+       <option value='newest'>최신 순</option>
+       <option value='rate'>별점 순</option>
+       <option value='review'>리뷰 순</option>
     </select>
-
+</div>
 <div class="post_box">
     <div class="post_item">
         <div class="post_item_top">
-            <div class="post_item_hashtag"></div>
-            <button class="like_button"> ♡ </button>
+            <div class="post_item_hashtag">#브이로그 #게임</div>
+            <button class="like_button"><img src="{% static 'ic-favorite-border-24-px.png' %}"></button>
         </div>
         <div class="post_item_bottom">
             <div class="post_item_title">
                 <p class="post_item_title_text">후회안할 세련된 영상 만들어 드립니다</p>
             </div>
+            <div class="line">
+            </div>
             <div class="post_item_price">
-                <p class="post_item_price_text">분당 1만원</p>
+                <p class="post_item_price_text">분당 <strong>1</strong> 만원</p>
             </div>
         </div>
     </div>
      <div class="post_item">
         <div class="post_item_top">
-            <div class="post_item_hashtag"></div>
-            <button class="like_button"> ♡ </button>
+            <div class="post_item_hashtag">#브이로그 #게임</div>
+            <button class="like_button"><img src="{% static 'ic-favorite-border-24-px.png' %}"></button>
         </div>
         <div class="post_item_bottom">
             <div class="post_item_title">
                 <p class="post_item_title_text">후회안할 세련된 영상 만들어 드립니다</p>
             </div>
+            <div class="line">
+            </div>
             <div class="post_item_price">
-                <p class="post_item_price_text">분당 1만원</p>
+                <p class="post_item_price_text">분당 <strong>1</strong> 만원</p>
             </div>
         </div>
     </div>
      <div class="post_item">
         <div class="post_item_top">
-            <div class="post_item_hashtag"></div>
-            <button class="like_button"> ♡ </button>
+            <div class="post_item_hashtag">#브이로그 #게임</div>
+            <button class="like_button"><img src="{% static 'ic-favorite-border-24-px.png' %}"</button>
         </div>
         <div class="post_item_bottom">
             <div class="post_item_title">
                 <p class="post_item_title_text">후회안할 세련된 영상 만들어 드립니다</p>
             </div>
+            <div class="line">
+            </div>
             <div class="post_item_price">
-                <p class="post_item_price_text">분당 1만원</p>
+                <p class="post_item_price_text">분당 <strong>1</strong> 만원</p>
             </div>
         </div>
     </div>
