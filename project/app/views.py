@@ -104,9 +104,6 @@ def new_editor(request):
             work =request.POST['work'],
             career = request.POST['career'],
             basic_price = request.POST['basic_price'],
-            # period = request.POST['period'],
-            # genre = request.POST['genre'],
-            # rating = request.POST['rating'],
             img = s3_url+str(request.user.pk)+'/'+now + file_to_upload.name
         )
         return redirect('detail_editor', new_post.pk)
@@ -161,24 +158,21 @@ def edit_editor(request, post_pk):
         s3 = session.resource("s3")
         now = datetime.now().strftime("%Y%H%M%S")
 
-        # img_object = s3.Bucket(AWS_STORAGE_BUCKET_NAME).put_object(
-        #     Key = now + file_to_upload.name,
-        #     Body = file_to_upload
-        # )
+        img_object = s3.Bucket(AWS_STORAGE_BUCKET_NAME).put_object(
+            Key = now + file_to_upload.name,
+            Body = file_to_upload
+        )
         s3_url = "https://pyeon-an.s3.ap-northeast-2.amazonaws.com/" 
 
         Post_editor.objects.filter(pk=post_pk).update(
-            # title = request.POST['title'],
-            # content = request.POST['content'],
-            # author = request.user,
-            # datetime = datetime.now(),   
+            title = request.POST['title'],
+            content = request.POST['content'],
+            author = request.user,
+            datetime = datetime.now(),   
             tool = request.POST['tool'],
-            # work =request.POST['work'],
-            # career = request.POST['career'],
-            # period = request.POST['period'],
-            # genre = request.POST['genre'],
-            # rating = request.POST['rating'],
-            # img = s3_url+now + file_to_upload.name
+            work =request.POST['work'],
+            career = request.POST['career'],
+            img = s3_url+now + file_to_upload.name
         )
         return redirect('detail_editor', post_pk)
     return render(request, 'edit_editor.html', {'post' : post})
@@ -241,7 +235,7 @@ def signup(request):
             username = request.POST['username'],
             password = request.POST['password']
         )
-        auth.login(request, new_user, backend='django.contrib.auth.backends.ModelBackend')
+        auth.login(request, new_user)
         return redirect('home')
     
     return render(request, 'registration/signup.html')
