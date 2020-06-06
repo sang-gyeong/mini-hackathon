@@ -20,4 +20,6 @@ from app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
+    path('detail_editor/<int:post_pk>', views.detail_editor, name="detail_editor"),
+    path('list_editor/', views.list_editor, name="list_editor"),
 ]
