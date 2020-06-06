@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% extends 'base.html' %}
-    {% load static %} 
-    <link rel="stylesheet" type="text/css" href="{% static 'todo.css' %}"> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'home.css' %}" type='text/css'>
+{% endblock head %}
+
+
     {% block content %}
     {% if user.is_authenticated %}
     <div class="top">
@@ -58,9 +55,9 @@
     {% else %}
     <div class="top">
         <div>오늘도,</div>
-        <div>00명의 유튜버와 00명의 편집자가</div>
+        <div><strong>00명의 유튜버</strong>와 <strong>00명의 편집자가</strong></div>
         <div>편-안에서 만나고 있습니다.</div>
-    </div>d
+    </div>
     <div class="best">
         <div class="title">이번주의 BEST 편집자</div>
         <div class="content">
@@ -86,38 +83,38 @@
         <div class="editor">*저는 편집자에요!</div>
         <div class="content">
             <div class="q1">
-                <div class="q1_text">1. 원하시는 영상 종류가 있으신가요?</div>
+                <div class="q1_text">1. 원하시는 <strong>영상 종류</strong>가 있으신가요?</div>
                 <div class="q1_option">
-                    <input type="radio" name="chk_info" value="브이로그">브이로그
-                    <input type="radio" name="chk_info" value="뷰티">뷰티
-                    <input type="radio" name="chk_info" value="게임">게임
-                    <input type="radio" name="chk_info" value="스트리밍">스트리밍
-                    <input type="radio" name="chk_info" value="음악">음악
-                    <input type="radio" name="chk_info" value="요리">요리
-                    <input type="radio" name="chk_info" value="기타">기타
+                    <input type="checkbox" name="chk_info" value="브이로그">브이로그
+                    <input type="checkbox" name="chk_info" value="뷰티">뷰티
+                    <input type="checkbox" name="chk_info" value="게임">게임
+                    <input type="checkbox" name="chk_info" value="스트리밍">스트리밍
+                    <input type="checkbox" name="chk_info" value="음악">음악
+                    <input type="checkbox" name="chk_info" value="요리">요리
+                    <input type="checkbox" name="chk_info" value="기타">기타
                 </div>
             </div>
             <div class="q2">
-                <div class="q2_text">2. 편집자의 장기 고용을 원하시나요?</div>
+                <div class="q2_text">2. 편집자의 <strong>장기 고용</strong>을 원하시나요?</div>
                 <div class="q2_option">
                     <input type="radio" name="chk_info" value="예">예
                     <input type="radio" name="chk_info" value="아니오">아니오
                 </div>
             </div>
             <div class="q3">
-                <div class="q3_text">3. 원하시는 근무형태가 있으신가요?</div>
+                <div class="q3_text">3. 원하시는 <strong>근무형태</strong>가 있으신가요?</div>
                 <div class="q3_option">
-                    <input type="radio" name="chk_info" value="영상촬영">영상촬영
-                    <input type="radio" name="chk_info" value="영상편집">영상편집
-                    <input type="radio" name="chk_info" value="자막">자막
-                    <input type="radio" name="chk_info" value="썸네일">썸네일
-                    <input type="radio" name="chk_info" value="기타">기타
+                    <input type="checkbox" name="chk_info" value="영상촬영">영상촬영
+                    <input type="checkbox" name="chk_info" value="영상편집">영상편집
+                    <input type="checkbox" name="chk_info" value="썸네일">썸네일
+                    <input type="checkbox" name="chk_info" value="자막">자막
+                    <input type="checkbox" name="chk_info" value="기타">기타
                 </div>
             </div>
         </div>
-        <a class="nav-item" href="{% url 'list_editor' %}">
+        <a class="nav-item" href="{% url 'home' %}">
             <div class="button">
-                00명의 편집자 보러가기>
+                00명의 편집자 보러가기 >
             </div>
         </a>
     </div>
