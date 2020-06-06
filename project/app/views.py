@@ -37,9 +37,6 @@ def detail_editor(request, post_pk):
 def detail_youtuber(request, post_pk):
     post = Post_youtuber.objects.get(pk=post_pk)
 
-<<<<<<< HEAD
-
-=======
     if request.method == "POST":
         Comment_youtuber.objects.create(
            post = post,
@@ -50,4 +47,3 @@ def detail_youtuber(request, post_pk):
         )
         return redirect('detail_youtuber', post_pk)
     return render(request, 'detail_youtuber.html', {'post' : post})
->>>>>>> 692931619100ab310f0e63243aab7371cb2bf3d8

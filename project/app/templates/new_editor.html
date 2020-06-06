@@ -3,7 +3,7 @@
 <head>
     {% extends 'base.html' %}
     {% load static %} 
-    <link rel="stylesheet" type="text/css" href="{% static 'todo.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'new_editor.css' %}"> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -19,7 +19,7 @@
     </div>
     <div class="content_box">필수정보
         <div class="content1">
-            <div class="content1_text">편집 가능 툴</div>
+            <div class="content_text">편집 가능 툴</div>
             <div class="content1_option">
                 <input type="radio" name="content_info" value="프리미어프로">프리미어프로
                 <input type="radio" name="content_info" value="애프터이펙트">애프터이펙트
@@ -32,7 +32,7 @@
             </div>
         </div> 
         <div class="content2">
-            <div class="content2_text">희망 근무 형태</div>
+            <div class="content_text">희망 근무 형태</div>
             <div class="content2_option">
                 <input type="radio" name="content_info" value="영상촬영">영상촬영
                 <input type="radio" name="content_info" value="영상편집">영상편집
@@ -42,18 +42,40 @@
             </div>
         </div>
         <div class="content3">
-            <div class="content3_text">희망 급여
+            <div class="content_text">희망 급여
                 <br><p>유튜버가 선택할 수 있는 BASIC, STANDARD, PREMIUM 가격을 설정해주세요</p>
             </div>
             <div class="content3_option">
-                <input type="radio" name="content_info" value="BASIC">BASIC
-                <input type="radio" name="content_info" value="STANDARD">STANDARD
-                <input type="radio" name="content_info" value="PREMIUM">PREMIUM
-
-
-
+                <div class="BASIC">BASIC
+                    <div class="BASIC_Content">
+                        <span class="BC">내용</span>
+                        <input type="text" value="내용을 입력하세요. ex) 간단한 자막 편집, 영상 촬영만">
+                    </div>
+                    <div class="BASIC_Price">
+                        <span class="BP">가격</span>
+                        <input type="text" value="가격을 입력하세요. ex) 분당 1만원">
+                    </div>
+                <div class="STANDARD">STANDARD
+                    <div class="STANDARD_Content">
+                        <span class="SC">내용</span>
+                        <input type="text" value="내용을 입력하세요. ex) 포토샵, 썸네일 및 정교한 편집 작업">
+                    </div>
+                    <div class="STANDARD_Price">
+                        <span class="SP">가격</span>
+                        <input type="text" value="가격을 입력하세요. ex) 분당 2만원">
+                    </div>
+                </div>
+                <div class="PREMIUM">PREMIUM
+                    <div class="PREMIUM_Content">
+                        <span class="PC">내용</span>
+                        <input type="text" value="내용을 입력하세요. ex) 에펙을 이용한 고도화된 편집 작업">
+                    </div>
+                    <div class="PREMIUM_Price">
+                        <span class="PP">가격</span>
+                        <input type="text" value="가격을 입력하세요. ex) 분당 3만원">
+                    </div>
         <div class="content4">
-            <div class="content4_text">상세 정보
+            <div class="content_box">상세 정보
                 <br><p>자신을 표현할 수 있는 내용을 기입해주세요</p>
             </div>
             <div class="content4_option">
@@ -62,3 +84,13 @@
                 <input type="url" name="content_info">유튜브 링크 첨부하기
             </div>
         </div>
+        <div class="contnet5">
+            <div class="content_box">유튜버가 유의해야할 점</div>
+            <div class="content5_option">
+                <input type="text" name="contnet_info" value="수정 사항은 3회까지 가능합니다, 분당/건당 둘 다 가능합니다">
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>
