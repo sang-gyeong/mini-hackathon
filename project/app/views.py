@@ -52,10 +52,6 @@ def detail_youtuber(request, post_pk):
         )
         return redirect('detail_youtuber', post_pk)
     return render(request, 'detail_youtuber.html', {'post' : post})
-<<<<<<< HEAD
-
-=======
->>>>>>> 396884b75fad87c22b046c4bf76cd33b618fb661
 
 def form_to_editor(request):
     if (request.method == 'POST'):
@@ -269,4 +265,19 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('home')
+
+def payment(request):
+    return render(request, 'payment.html')
+
+def mypage_apply(request):
+    return render(request, 'mypage_apply.html')
+
+def mypage_contract(request):
+    return render(request, 'mypage_contract.html')
+
+def mypage_pay(request):
+    return render(request, 'mypage_pay.html')
+
+def chat(request):
+    return render(request, 'chat.html')
 
