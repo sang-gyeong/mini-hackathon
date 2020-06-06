@@ -6,7 +6,7 @@ class Post_youtuber(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     datetime = models.DateTimeField()
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='posts')
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='youtuber')
     img = models.TextField()
 
     def __str__(self):
@@ -16,14 +16,14 @@ class Post_editor(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     datetime = models.DateTimeField()
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='posts')
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='editor')
     img = models.TextField()
 
     def __str__(self):
         return self.title
 
 class Comment(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+    post = models.ForeignKey(Post_youtuber, on_delete=models.CASCADE, related_name='comments')
     content = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments')
     rate = models.IntegerField()
