@@ -241,7 +241,7 @@ def signup(request):
             username = request.POST['username'],
             password = request.POST['password']
         )
-        auth.login(request, new_user, backend='django.contrib.auth.backends.ModelBackend')
+        auth.login(request, new_user)
         return redirect('home')
     
     return render(request, 'registration/signup.html')
