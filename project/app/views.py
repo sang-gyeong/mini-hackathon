@@ -280,4 +280,3 @@ def mypage_pay(request):
 
 def chat(request):
     return render(request, 'chat.html')
-
