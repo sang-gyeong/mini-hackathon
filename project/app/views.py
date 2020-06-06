@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Post_youtuber, Post_editor, Comment
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User 
+from django.contrib import auth
 
 # Create your views here.
 def home(request):
