@@ -6,7 +6,7 @@
 {% endblock head %}
 
     {% block content %}
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
       {% csrf_token %}
         <div class="top">
             <h3>편집자 등록하기</h3>
@@ -88,15 +88,13 @@
                     </div>
                     <div class="content4_option">
                         <input type="text" name="content_info" value="">
-                        <input class="img_file" type="file" name="img">
                         <span>유튜브 링크 첨부하기</span>
                         <input type="text" name="vid_url" placeholder="http://...">
                     </div>
                     <div class="content5">
-                        <input type="checkbox" name="career" value="newbee">경력무관
-                        <input type="checkbox" name="career" value="one_five">1년이상 5년미만
-                        <input type="checkbox" name="career" value="five_ten">5년이상
-
+                        <input type="checkbox" name="career" value="career">경력무관
+                        <input type="checkbox" name="career" value="career">1년이상 5년미만
+                        <input type="checkbox" name="career" value="career">5년이상
                     </div>
                 </div>
                 <div class="contnet6">

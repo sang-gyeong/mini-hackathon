@@ -10,17 +10,17 @@ from boto3.session import Session
 
 # Create your views here.
 def home(request):
-    comment_editor = Comment_editor.objects.all
-    post_editor = Post_editor.objects.all
+    comment_editor = Comment_editor.objects.all()
+    post_editor = Post_editor.objects.all()
     return render(request, 'home.html', {'comment_editor' : comment_editor, 'post_editor' : post_editor})
 
 
 def list_editor(request):
-    post_editor = Post_editor.objects.all
+    post_editor = Post_editor.objects.all()
     return render(request, 'list_editor.html', {'post_editor' : post_editor})
 
 def list_youtuber(request):
-    post_youtuber = Post_youtuber.objects.all
+    post_youtuber = Post_youtuber.objects.all()
     return render(request, 'list_youtuber.html', {'post_youtuber' : post_youtuber})
 
 @login_required(login_url='/registration/login')
@@ -103,13 +103,10 @@ def new_editor(request):
             tool = request.POST['tool'],
             work =request.POST['work'],
             career = request.POST['career'],
-            period = request.POST['period'],
-            genre = request.POST['genre'],
-            rating = request.POST['rating'],
+            basic_price = request.POST['basic_price'],
             img = s3_url+str(request.user.pk)+'/'+now + file_to_upload.name
         )
         return redirect('detail_editor', new_post.pk)
-
     return render(request, 'new_editor.html')
 
 @login_required(login_url='/registration/login')
@@ -125,7 +122,7 @@ def new_youtuber(request):
         now = datetime.now().strftime("%Y%H%M%S")
 
         img_object = s3.Bucket(AWS_STORAGE_BUCKET_NAME).put_object(
-            Key = str(request.user.pk)+'/'+now + file_to_upload.name,
+            Key = now + file_to_upload.name,
             Body = file_to_upload
         )
         s3_url = "https://pyeon-an.s3.ap-northeast-2.amazonaws.com/" 
@@ -141,7 +138,7 @@ def new_youtuber(request):
             period = request.POST['period'],
             genre = request.POST['genre'],
             rating = request.POST['rating'],
-            img = s3_url+str(request.user.pk)+'/'+now + file_to_upload.name
+            img = s3_url + file_to_upload.name
         )
         return redirect('detail_youtuber', new_post.pk)
 
@@ -162,7 +159,7 @@ def edit_editor(request, post_pk):
         now = datetime.now().strftime("%Y%H%M%S")
 
         img_object = s3.Bucket(AWS_STORAGE_BUCKET_NAME).put_object(
-            Key = str(request.user.pk)+'/'+now + file_to_upload.name,
+            Key = now + file_to_upload.name,
             Body = file_to_upload
         )
         s3_url = "https://pyeon-an.s3.ap-northeast-2.amazonaws.com/" 
@@ -175,10 +172,7 @@ def edit_editor(request, post_pk):
             tool = request.POST['tool'],
             work =request.POST['work'],
             career = request.POST['career'],
-            period = request.POST['period'],
-            genre = request.POST['genre'],
-            rating = request.POST['rating'],
-            img = s3_url+str(request.user.pk)+'/'+now + file_to_upload.name
+            img = s3_url+now + file_to_upload.name
         )
         return redirect('detail_editor', post_pk)
     return render(request, 'edit_editor.html', {'post' : post})
@@ -197,7 +191,7 @@ def edit_youtuber(request, post_pk):
         now = datetime.now().strftime("%Y%H%M%S")
 
         img_object = s3.Bucket(AWS_STORAGE_BUCKET_NAME).put_object(
-            Key = str(request.user.pk)+'/'+now + file_to_upload.name,
+            Key = now + file_to_upload.name,
             Body = file_to_upload
         )
         s3_url = "https://pyeon-an.s3.ap-northeast-2.amazonaws.com/" 
@@ -213,7 +207,7 @@ def edit_youtuber(request, post_pk):
             period = request.POST['period'],
             genre = request.POST['genre'],
             rating = request.POST['rating'],
-            img = s3_url+str(request.user.pk)+'/'+now + file_to_upload.name
+            img = s3_url + now + file_to_upload.name
         )
         return redirect('detail_youtuber', post_pk)
     return render(request, 'edit_youtuber.html', {'post' : post})

@@ -69,9 +69,10 @@
 </div>
 <div class="post_box">
     {% for editor in post_editor %}
-    <div class="post_item">
-        <div class="post_item_top">
-            <div class="post_item_hashtag">#브이로그 #뷰티</div>
+    <div class="post_item" style="background-image : url('{{editor.img}}'); background-size : cover;">
+         <div class="post_item_top" >
+         <div class="post_item_hashtag">#브이로그 #뷰티</div>
+           
             <button class="like_button"><img src="{% static 'ic-favorite-border-24-px.png' %}"></button>
         </div>
         <div class="post_item_bottom">
