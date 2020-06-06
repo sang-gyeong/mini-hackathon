@@ -1,0 +1,69 @@
+{% block content %}
+<div class="top">
+    <div class="photo"></div>
+    <div class="profile">
+        <div class="welcome">{{user.username}}님의 마이페이지</div>
+        <div class="link">
+            <a class="nav-item" href="{% url 'edit_youtuber' %}">
+                <div class="button">개인정보 수정</div>
+            </a>
+            <a class="nav-item" href="{% url 'chat' %}">
+                <div class="button">쪽지함</div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="mode">
+    <a class="to_mode" href="{% url 'mypage_youtuber' %}">
+        <div class="">유튜버 모드</div>
+    </a>
+    <a class="to_mode" href="{% url 'mypage_editor' %}">
+        <div class="">편집자 모드</div>
+    </a>
+</div>
+<div class="situations">
+    <a class="transaction" href="{% url 'mypage_apply' %}">
+        <div class="situ">신청중</div>
+        <div class="number">{{}}</div>
+    </a>
+    <a class="transaction" href="{% url 'mypage_contract' %}">
+        <div class="situ">계약중</div>
+        <div class="number">{{}}</div>
+    </a>
+    <a class="transaction" href="{% url 'mypage_pay' %}">
+        <div class="situ">결제</div>
+        <div class="number">{{}}</div>
+    </a>
+</div>
+<div class="content">
+    <div class="title">지원한 모집 공고</div>
+    <div class="">
+        {% for comment in post.comments.all %}
+        <a class="" href="{% url 'mypage_apply' %}">
+            <div class="">{{comment.content}}</div>
+        </a>
+        {% endfor %}
+        {}
+    </div>
+</div>
+<div class="content">
+    <div class="title">찜한 모집 공고</div>
+    <div class="">
+        {% for comment in post.comments.all %}
+        <a class="" href="{% url'detail_youtuber' %}">
+            <div class="">{{comment.content}}</div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+<div class="content">
+    <div class="title">내 에디터 프로필</div>
+    <div class="">
+        {% for comment in post.comments.all %}
+        <a class="" href="{% url'detail_editor' %}">
+            <div class="">{{comment.content}}</div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content}
